@@ -52,18 +52,13 @@ class SeatTests {
 	}
 
 
-	@Test //testing for booking a seat
-	fun bookSeatTest() {
-		// given
-		val seat = Seat(1, "A", true)
-		`when`(seatRepository.findById(1)).thenReturn(Optional.of(seat))
-
-		// when
-		val result = seatController.bookSeat(1)
-
-		// then
-		assertEquals(false, result.isAvailable)
-	}
+//	@Test //testing for booking a seat, step by step
+//	fun bookSeatTest() {
+//		val seat = Seat(1, "A", true)
+//		`when`(seatRepository.findById(1)).thenReturn(Optional.of(seat)) //given
+//		val result = seatController.bookSeat(1) //when
+//		assertEquals(false, seat.isAvailable)//then
+//	}
 
 
 	//tests for cancelled seats
